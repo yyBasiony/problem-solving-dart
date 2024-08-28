@@ -202,6 +202,9 @@ int newWords(String s) {
   return letterCount.values.reduce((a, b) => a < b ? a : b);
 }
 
+String replaceWord(String s) {
+  return s.replaceAll("EGYPT", " ");
+}
 
 void main() {
   print(createNewString('LEVEL', 'ONE'));
@@ -221,4 +224,5 @@ print(countWords("Meep Meep!"));
 print(reverseWords("I love you"));
 print(maxSplit("LLRRLLLRRR"));
 print(newWords("EgYpTaz"));
+print(replaceWord("BRITISHEGYPTGHANA"));
 }
