@@ -161,7 +161,9 @@ String sortString(String s, int n) {
   return chars.join('');
 }
 
-
+int countWords(String s) {
+  return s.split(RegExp(r'[^a-zA-Z]+')).where((word) => word.isNotEmpty).length;
+}
 
 void main() {
   print(createNewString('LEVEL', 'ONE'));
@@ -179,4 +181,5 @@ print(loveString("ipAsu ","ccsit"));
 print(subsequence('ahhellllloou'));
 print(maxsubseduance('ababb',5));
 print(sortString("deab",4));
+print(countWords("Meep Meep!"));
 }
