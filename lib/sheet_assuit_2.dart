@@ -355,10 +355,6 @@ int threeNumbers (int K, int S) {
   return counter;
 }
 
-
-
-
-
 void main() {
   List<int> numbers1ToN = print1ToN(5);
   for (int number in numbers1ToN) {
