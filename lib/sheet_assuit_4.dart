@@ -191,9 +191,7 @@ void main() {
   print(letUseGetile("Egyptian collegiate programming\ contest"));
   print(compare('acm', 'acpc'));
   print(Strings("abcd", "ef"));
-  print(count('351'));
-
-  print(wayTooLong('pneumonoultramicroscopicsilicovolcanoconiosis'));
+  print(count('351'));print(wayTooLong('pneumonoultramicroscopicsilicovolcanoconiosis'));
 print(Conversion("happy,NewYear,enjoy"));
 print(goodBad('11111110'));
 print(palindrome('abba'));
@@ -204,5 +202,5 @@ print(maxsubseduance('ababb',5));
 print(sortString("deab",4));
 print(countWords("Meep Meep!"));
 print(reverseWords("I love you"));
-print(reverseWords("LLRRLLLRRR"));
+print(maxSplit("LLRRLLLRRR"));
 }
