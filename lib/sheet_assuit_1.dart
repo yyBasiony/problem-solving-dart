@@ -1,4 +1,3 @@
-//import 'dart:io';
 import 'dart:math';
 
 String sayHello(String s) {
@@ -90,7 +89,7 @@ int calculator(int a, int b, String x) {
   } else if (x == '/') {
     return a ~/ b;
   } else {
-    throw ArgumentError('Invalid operation');
+    throw ArgumentError('Invalid');
   }
 }
 
@@ -173,7 +172,7 @@ String mathematicalExpression(int x, int y, int q, String s) {
   } else if (s == '*') {
     t = x * y;
   } else {
-    return "Incorrect value";
+    return "Incorrect ";
   }
   return (q == t) ? "Yes" : "$t";
 }
