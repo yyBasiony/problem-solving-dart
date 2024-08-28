@@ -164,7 +164,11 @@ String sortString(String s, int n) {
 int countWords(String s) {
   return s.split(RegExp(r'[^a-zA-Z]+')).where((word) => word.isNotEmpty).length;
 }
-
+String reverseWords(String s) {
+  List<String> words = s.split(' ');
+  List<String> reversedWords = words.map((word) => word.split('').reversed.join('')).toList();
+  return reversedWords.join(' ');
+}
 void main() {
   print(createNewString('LEVEL', 'ONE'));
   print(letUseGetile("Egyptian collegiate programming\ contest"));
@@ -182,4 +186,5 @@ print(subsequence('ahhellllloou'));
 print(maxsubseduance('ababb',5));
 print(sortString("deab",4));
 print(countWords("Meep Meep!"));
+print(reverseWords("I love you"));
 }
