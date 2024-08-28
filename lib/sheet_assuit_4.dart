@@ -169,6 +169,23 @@ String reverseWords(String s) {
   List<String> reversedWords = words.map((word) => word.split('').reversed.join('')).toList();
   return reversedWords.join(' ');
 }
+List<String> maxSplit(String s) {
+  int balance = 0;
+  List<String> result = [];
+  String temp = "";
+
+  for (int i = 0; i < s.length; i++) {
+    temp += s[i];
+    balance += s[i] == 'L' ? 1 : -1;
+    if (balance == 0) {
+      result.add(temp);
+      temp = "";
+    }
+  }
+
+  return result;
+}
+
 void main() {
   print(createNewString('LEVEL', 'ONE'));
   print(letUseGetile("Egyptian collegiate programming\ contest"));
@@ -187,4 +204,5 @@ print(maxsubseduance('ababb',5));
 print(sortString("deab",4));
 print(countWords("Meep Meep!"));
 print(reverseWords("I love you"));
+print(reverseWords("LLRRLLLRRR"));
 }
