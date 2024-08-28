@@ -205,6 +205,25 @@ int newWords(String s) {
 String replaceWord(String s) {
   return s.replaceAll("EGYPT", " ");
 }
+String comparison(String s) {
+  int n = s.length;
+  String smallest = s;
+  for (int i = 1; i < n; i++) {
+    String x = s.substring(0, i);
+    String y = s.substring(i);
+    String sortedX = String.fromCharCodes(x.runes.toList()..sort());
+    String sortedY = String.fromCharCodes(y.runes.toList()..sort());
+
+    String combined = sortedX + sortedY;
+
+    if (combined.compareTo(smallest) < 0) {
+      smallest = combined;
+    }
+  }
+
+  return smallest;
+}
+
 
 void main() {
   print(createNewString('LEVEL', 'ONE'));
@@ -225,4 +244,5 @@ print(reverseWords("I love you"));
 print(maxSplit("LLRRLLLRRR"));
 print(newWords("EgYpTaz"));
 print(replaceWord("BRITISHEGYPTGHANA"));
+print(comparison("acmicpc"));
 }
