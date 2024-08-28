@@ -109,7 +109,7 @@ String maxInSubarrays(int N, List<int> A) {
 }
 List<int> replaceMinMax(int n, List<int> a) {
   if (n < 2 || n != a.length) {
-    throw ArgumentError("Invalid input.");
+    throw ArgumentError("Invalid .");
   }
   int minIndex = 0;
   int maxIndex = 0;
