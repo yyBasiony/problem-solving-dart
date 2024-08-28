@@ -145,8 +145,25 @@ int maxsubseduance(String value, int size) {
   return counter;
 }
 
+String sortString(String s, int n) {
+  List<String> chars = s.split('');
 
-  void main() {
+  for (int i = 0; i < n - 1; i++) {
+    for (int j = 0; j < n - i - 1; j++) {
+      if (chars[j].compareTo(chars[j + 1]) > 0) {
+        String temp = chars[j];
+        chars[j] = chars[j + 1];
+        chars[j + 1] = temp;
+      }
+    }
+  }
+
+  return chars.join('');
+}
+
+
+
+void main() {
   print(createNewString('LEVEL', 'ONE'));
   print(letUseGetile("Egyptian collegiate programming\ contest"));
   print(compare('acm', 'acpc'));
@@ -161,4 +178,5 @@ print(countLetters('aaabbc'));
 print(loveString("ipAsu ","ccsit"));
 print(subsequence('ahhellllloou'));
 print(maxsubseduance('ababb',5));
+print(sortString("deab",4));
 }
