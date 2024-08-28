@@ -25,52 +25,52 @@ int digitsSummation(int n, int m) {
   return ((n % 10) + (m % 10));
 }
 
-// double summationFrom1ToN(int n) {
-//   return ((n * (n + 1)) / 2);
-// }
-//
-// double twoNnmbers(int a, int b) {
-//   return (a / b);
-// }
-//
-// String welcomeConditions(int a, int b) {
-//   return a >= b ? "Yes" : "No";
-// }
-//
-// String multiples(int a, int b) {
-//   return (a % b == 0 || b % a == 0) ? "Multiples" : "No Multiples";
-// }
-//
-// String maxAndMin(int a, int b, int c) {
-//   if (a <= b && a <= c) {
-//     return b <= c ? "$a\t$c" : "$a\t$b";
-//   } else if (b <= a && b <= c) {
-//     return a <= c ? "$b\t$c" : "$b\t$a";
-//   } else {
-//     return a <= b ? "$c\t$b" : "$c\t$a";
-//   }
-// }
-//
-// String theBrothers(String r1, r2, String a1, String a2) {
-//   return r2 == a2 ? "ARE Brothers" : "NOT";
-// }
-//
-// String capitalORSmallORDigit(String a) {
-//   const smallLetters = 'abcdefghijklmnopqrstuvwxyz';
-//   const capitalLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-//   const digits = '0123456789';
-//
-//   if (smallLetters.contains(a)) {
-//     return "ALPHA\nIS SMALL";
-//   } else if (capitalLetters.contains(a)) {
-//     return "ALPHA\nIS CAPITAL";
-//   } else if (digits.contains(a)) {
-//     return "IS DIGIT";
-//   } else {
-//     return "INVALID";
-//   }
-// }
-//
+double summationFrom1ToN(int n) {
+  return ((n * (n + 1)) / 2);
+}
+
+double twoNnmbers(int a, int b) {
+  return (a / b);
+}
+
+String welcomeConditions(int a, int b) {
+  return a >= b ? "Yes" : "No";
+}
+
+String multiples(int a, int b) {
+  return (a % b == 0 || b % a == 0) ? "Multiples" : "No Multiples";
+}
+
+String maxAndMin(int a, int b, int c) {
+  if (a <= b && a <= c) {
+    return b <= c ? "$a\t$c" : "$a\t$b";
+  } else if (b <= a && b <= c) {
+    return a <= c ? "$b\t$c" : "$b\t$a";
+  } else {
+    return a <= b ? "$c\t$b" : "$c\t$a";
+  }
+}
+
+String theBrothers(String r1, r2, String a1, String a2) {
+  return r2 == a2 ? "ARE Brothers" : "NOT";
+}
+
+String capitalORSmallORDigit(String a) {
+  const smallLetters = 'abcdefghijklmnopqrstuvwxyz';
+  const capitalLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const digits = '0123456789';
+
+  if (smallLetters.contains(a)) {
+    return "ALPHA\nIS SMALL";
+  } else if (capitalLetters.contains(a)) {
+    return "ALPHA\nIS CAPITAL";
+  } else if (digits.contains(a)) {
+    return "IS DIGIT";
+  } else {
+    return "INVALID";
+  }
+}
+
 // String Char(String x) {
 //   const String lowercase = 'abcdefghijklmnopqrstuvwxyz';
 //   const String uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -204,18 +204,18 @@ int digitsSummation(int n, int m) {
 //   return (b * log(a) > d * log(c)) ? "YES" : "NO";
 // }
 //
-// void main() {
-//   print(sayHello("programmer\n"));
-//   print(basicData(3, 12345678912345, "a", 334.23, 14049.30493));
-//   print(simpleCalculator(5, 10));
-//   int differencee = difference(1, 2, 3, 4);
-//   print("Difference = $differencee");
-//   double area = areaCircle(3.141592653, 2);
-//   print("$area");
-//   int sum = digitsSummation(13, 12);
-//   print("$sum");
-//   double summation = summationFrom1ToN(3);
-//   print("$summation");
+void main() {
+  print(sayHello("programmer\n"));
+  print(basicData(3, 12345678912345, "a", 334.23, 14049.30493));
+  print(simpleCalculator(5, 10));
+  int differencee = difference(1, 2, 3, 4);
+  print("Difference = $differencee");
+  double area = areaCircle(3.141592653, 2);
+  print("$area");
+  int sum = digitsSummation(13, 12);
+  print("$sum");
+  double summation = summationFrom1ToN(3);
+  print("$summation");
 //   double x = twoNnmbers(10, 3);
 //   print("floor 10/3 = ${x.floor()}");
 //   print("ceil 10/3 = ${x.ceil()}");
@@ -236,4 +236,4 @@ int digitsSummation(int n, int m) {
 //   print(floatOrInt(234.000));
 //   print(comparison(5, 4, '>'));
 //   print(toIntervals(1, 15, 5, 27));
-// }
+}
