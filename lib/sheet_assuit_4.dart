@@ -185,6 +185,23 @@ List<String> maxSplit(String s) {
 
   return result;
 }
+int newWords(String s) {
+  s = s.toLowerCase();
+  Map<String, int> letterCount = {
+    'e': 0,
+    'g': 0,
+    'y': 0,
+    'p': 0,
+    't': 0
+  };
+  for (var char in s.split('')) {
+    if (letterCount.containsKey(char)) {
+      letterCount[char] = letterCount[char]! + 1;
+    }
+  }
+  return letterCount.values.reduce((a, b) => a < b ? a : b);
+}
+
 
 void main() {
   print(createNewString('LEVEL', 'ONE'));
@@ -203,4 +220,5 @@ print(sortString("deab",4));
 print(countWords("Meep Meep!"));
 print(reverseWords("I love you"));
 print(maxSplit("LLRRLLLRRR"));
+print(newWords("EgYpTaz"));
 }
