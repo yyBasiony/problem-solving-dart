@@ -50,16 +50,13 @@ String maxAndMin(int a, int b, int c) {
     return a <= b ? "$c\t$b" : "$c\t$a";
   }
 }
-
 String theBrothers(String r1, r2, String a1, String a2) {
   return r2 == a2 ? "ARE Brothers" : "NOT";
 }
-
 String capitalORSmallORDigit(String a) {
   const smallLetters = 'abcdefghijklmnopqrstuvwxyz';
   const capitalLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const digits = '0123456789';
-
   if (smallLetters.contains(a)) {
     return "ALPHA\nIS SMALL";
   } else if (capitalLetters.contains(a)) {
