@@ -27,7 +27,7 @@ bool isBinaryPalindrome(int n) {
   return binary == reversedBinary;
 }
 
-String checkWonderful(int n) {
+String Wonderful(int n) {
   if (isOdd(n) && isBinaryPalindrome(n)) {
     return 'YES';
   } else {
@@ -46,7 +46,7 @@ bool isPrime(int n) {
   return true;
 }
 
-List<String> checkPrimes(List<int> numbers) {
+List<String> PrimeFunction(List<int> numbers) {
   List<String> results = [];
 
   for (int n in numbers) {
@@ -130,14 +130,88 @@ List<int> shiftRight(List<int> array, int x) {
   return result;
 }
 
+List<int> Arrays(List<int> a, List<int> b) {
+  List<int> c = List<int>.filled(a.length + b.length, 0);
+
+  for (int i = 0; i < b.length; i++) {
+    c[i] = b[i];
+  }
+  for (int i = 0; i < a.length; i++) {
+    c[b.length + i] = a[i];
+  }
+
+  return c;
+}
+int countDistinctNumbers(List<int> numbers) {
+  Set<int> distinctNumbers = Set<int>.from(numbers);
+  return distinctNumbers.length;
+}
+int shiftZeros(List<int> values) {
+  int zeroCount = 0;
+
+  for (int value in values) {
+    if (value != 0) {
+      stdout.write('$value ');
+    } else {
+      zeroCount++;
+    }
+  }
+
+  return zeroCount;
+}
+
+
+int getMax(List<int> array) {
+  return array.reduce((a, b) => a > b ? a : b);
+}
+
+int getMin(List<int> array) {
+  return array.reduce((a, b) => a < b ? a : b);
+}
+
+bool ISPrime(int number) {
+  if (number <= 1) return false;
+  if (number <= 3) return true;
+  if (number % 2 == 0 || number % 3 == 0) return false;
+  for (int i = 5; i * i <= number; i += 6) {
+    if (number % i == 0 || number % (i + 2) == 0) return false;
+  }
+  return true;
+}
+
+bool Palindrome(int number) {
+  String str = number.toString();
+  return str == str.split('').reversed.join('');
+}
+
+int countDivisors(int number) {
+  int count = 0;
+  for (int i = 1; i <= number; i++) {
+    if (number % i == 0) count++;
+  }
+  return count;
+}
+
+int getMaxDivisorsNumber(List<int> array) {
+  int maxDivisors = 0;
+  int numberWithMaxDivisors = 0;
+  for (int number in array) {
+    int divisors = countDivisors(number);
+    if (divisors > maxDivisors || (divisors == maxDivisors && number > numberWithMaxDivisors)) {
+      maxDivisors = divisors;
+      numberWithMaxDivisors = number;
+    }
+  }
+  return numberWithMaxDivisors;
+}
 
 
 void main() {
   print(add(1, 4));
   print(prinnt(5));
-  print(checkWonderful(3));
+  print(Wonderful(3));
   List<int> numbers = [3, 2, 4, 8];
-  print(checkPrimes(numbers));
+  print(PrimeFunction(numbers));
   print(swap(5, 2));
   print(equation(5, 5));
   print(findMinMax([10, 13, 95, 1, 3]));
@@ -160,5 +234,8 @@ void main() {
   printMatrix(matrix);
   print(calculateAverage([1.0, 2.0 ,5.0]));
   print(shiftRight([1, 2 ,3, 4, 5],21));
+  print(Arrays([1, 2],[3, 4]));
+  print(countDistinctNumbers([1 ,2 ,2]));
+  print(shiftZeros([2, 0 ,0, 5]));
 
 }
