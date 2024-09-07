@@ -116,6 +116,21 @@ double calculateAverage(List<double> numbers) {
   double sum = numbers.reduce((a, b) => a + b);
   return sum / numbers.length;
 }
+List<int> shiftRight(List<int> array, int x) {
+  int n = array.length;
+  x = x % n;
+  if (x == 0) return array;
+
+  List<int> result = List.filled(n, 0);
+
+  for (int i = 0; i < n; i++) {
+    result[(i + x) % n] = array[i];
+  }
+
+  return result;
+}
+
+
 
 void main() {
   print(add(1, 4));
@@ -144,5 +159,6 @@ void main() {
   swapColumns(matrix, colX, colY);
   printMatrix(matrix);
   print(calculateAverage([1.0, 2.0 ,5.0]));
+  print(shiftRight([1, 2 ,3, 4, 5],21));
 
 }
